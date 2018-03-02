@@ -1,0 +1,485 @@
+.home-container{
+  width: calc(100vw - #{$space-width*2});
+  position: relative;
+  margin:0 auto;
+
+  @media screen and (max-width: $tablet-screen) {
+    width: calc(100vw - #{$space-width*1});
+  }
+
+  @media screen and (max-width: $pc-screen-sm - 1) {
+    width: 100vw;
+  }
+
+}
+
+
+.scroll-tip{
+  width: 100vw;
+  position: fixed;
+  text-align: center;
+  bottom: -60px;
+  left: 0;
+  opacity: 0;
+  z-index: $z-index-top;
+  @extend .animation-s;
+
+  @media screen and (max-width: $tablet-screen) {
+    display: none;
+  }
+
+  &--show{
+    bottom: -1px;
+    opacity: 1;
+  }
+
+  &__txt{
+    position: relative;
+    left: 85px;
+    top: 35px;
+    font-size: $font-s-16;
+    color: $color-dark;
+    letter-spacing: 2px;
+  }
+
+  &__ani{
+    display: inline-block;
+    vertical-align: top;
+    width: 1px;
+    height: 50px;
+    position: relative;
+    margin:0 auto;
+    overflow: hidden;
+    background-color: $color-white-40a;
+
+    &__line{
+      display: block;
+      width: 1.5px;
+      height: 10px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      animation-name: posAni;
+      animation-duration: 0.8s;
+      animation-iteration-count: infinite;
+    }
+
+  }
+
+  @keyframes posAni {
+    from {
+      top: -10px;
+    }
+
+    to {
+      top: 50px;
+    }
+  }
+
+}
+
+
+.noeinoi-d{
+  display: flex;
+  width: calc(100vw - #{$space-width*2});
+  height: calc(100vh - #{$space-width*2});
+  position: relative;
+
+  @media screen and (max-width: $pc-screen-sm - 1) {
+    width: 120px;
+    height: calc(100vh - 60px);
+  }
+
+  &__color-block{
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media screen and (max-width: $pc-screen-lg - 1) {
+      width: 200px;
+    }
+
+    @media screen and (max-width: $pc-screen-sm - 1) {
+      width: 100%;
+    }
+
+  }
+
+}
+
+
+/* noeinoi page list [start] */
+.noeinoi-page-list{
+  position: fixed;
+  text-align: right;
+  z-index: $z-index-med;
+  top: 185px;
+  right: calc( 100vw - #{$space-width*4 - $space-width/2});
+  @extend .animation-m;
+
+  @media screen and (max-width: $pc-screen-lg - 1) {
+    right: calc( 100vw - #{$space-width*3 - $space-width/2});
+  }
+
+  @media screen and (max-width: $tablet-screen) {
+    right: calc( 100vw - #{$space-width*3 - $space-width});
+  }
+
+  @media screen and (max-width: $pc-screen-sm - 1) {
+    display: none;
+  }
+
+  &__oi{
+    color: $color-white;
+    font-size: 120px;
+    line-height: 120px;
+    display: block;
+    min-height: 120px;
+    letter-spacing: 4px;
+    @extend .ff-RobotBlackItalic;
+
+    b{
+      color: $color-dark;
+      @extend .ff-RobotBlackItalic;
+    }
+
+  }
+
+  &__list{
+    color: $color-white;
+    font-size: $font-s-60;
+    line-height: $font-s-60;
+    letter-spacing: 4px;
+    @extend .ff-RobotLightItalic;
+
+    b{
+      @extend .ff-RobotBlackItalic;
+    }
+
+  }
+
+  &--open{
+    // right: calc( 100vw - #{$space-width*2 - $space-width/2});
+  }
+
+}  /* noeinoi page list [end] */
+
+
+/* noeinoi hero block [start] */
+.noeinoi-main{
+  width: calc(100vw - #{$space-width*4});
+  height: calc(100vh - #{$space-width*2});
+  overflow: hidden;
+  cursor: pointer;
+  position: fixed;
+  top: calc( #{$space-width*1} );
+  right: 0px;
+  z-index: $z-index-med;
+  background-color: $color-white;
+  transition: top 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
+  webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  -o-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+
+  @media screen and (max-width: $pc-screen-lg - 1) {
+    width: calc(100vw - #{$space-width*3});
+  }
+
+  @media screen and (max-width: $tablet-screen) {
+    width: calc(100vw - #{$space-width*2.5});
+  }
+
+  @media screen and (max-width: $pc-screen-sm - 1) {
+    width: 100vw;
+    height: calc(100vh - 65px);
+    top: 60px;
+  }
+
+  /* hero block [start] */
+  &__hero-block{
+    position: relative;
+    width: 100%;
+    height: inherit;
+    max-height: calc(100vh - #{$space-width*1 - $space-width*0.5});
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    @extend .bg-cover;
+
+    @media screen and (max-width: $tablet-screen) {
+      max-height: calc(100vh - #{$space-width*2 - $space-width*0.5});
+    }
+
+    @media screen and (max-width: $pc-screen-sm - 1) {
+      max-height: 100%;
+    }
+
+    /* intro block [start] */
+    &__intro-block{
+      width: 80%;
+      max-width: 1600px;
+      position: relative;
+      margin: 0 60px;
+
+      @media screen and (max-width: $pc-screen-sm - 1) {
+        margin: 0 30px;
+      }
+
+      .company-title{
+        margin-bottom: 15px;
+        @extend .ff-RobotLight;
+
+        @media screen and (max-width: $pc-screen-sm - 1) {
+          font-size: $font-s-20;
+          line-height: $font-s-20;
+        }
+
+      }
+
+      .projects-title{
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-weight: 100;
+        width: 90%;
+        max-width: 900px;
+        @extend .ff-RobotLight;
+
+        @media screen and (max-width: $pc-screen-lg - 1) {
+          font-size: 90px;
+          line-height: 90px;
+          max-width: 700px;
+        }
+
+        @media screen and (max-width: $pc-screen-sm - 1) {
+          font-size: $font-s-48;
+          line-height: $font-s-48;
+          max-width: calc(100% - 50px);
+        }
+
+      }
+
+      .role-txt{
+        margin-bottom: 30px;
+        @extend .ff-RobotLight;
+
+        @media screen and (max-width: $pc-screen-sm - 1) {
+          margin-bottom: 15px;
+          font-size: $font-s-16;
+          line-height: $font-s-16;
+        }
+
+      }
+
+      .date-txt{
+        font-weight: bolder;
+        @extend .ff-RobotLight;
+
+        @media screen and (max-width: $pc-screen-sm - 1) {
+          font-size: $font-s-16;
+          line-height: $font-s-16;
+        }
+
+      }
+
+    }  /* intro block [end] */
+
+
+  }  /* hero block [end] */
+
+  &--open{
+    overflow-y: auto;
+    cursor: auto;
+    width: 100vw;
+    height: 100vh;
+    top: 0px !important;
+    @extend .scroll-view;
+
+    .noeinoi-main__hero-block{
+
+      @media screen and (orientation: portrait){
+        max-height: 60vw;
+      }
+
+      @media screen and (max-width: $pc-screen-sm - 1) {
+        max-height: 100vw;
+      }
+
+    }
+
+    .noeinoi-main__hero-block__intro-block{
+      width: calc(90% - 120px);
+      margin: 0 auto;
+
+      @media screen and (max-width: $pc-screen-lg - 1) {
+        width: calc(90% - 80px);
+      }
+
+      @media screen and (max-width: $pc-screen-sm - 1) {
+        width: calc(100% - 40px);
+      }
+
+    }
+
+  }
+
+
+}  /* noeinoi hero block [end] */
+
+
+/* hero block switch [start] */
+.hero-block-switch{
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: fixed;
+  z-index: $z-index-top;
+  right: 0px;
+  top: calc( 100vh - #{ $space-width*3 } );
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out, top 0.5s ease-in-out;
+
+  @media screen and (max-width: $tablet-screen) {
+    top: calc( 100vh - #{ $space-width*2.5 } );
+  }
+
+  @media screen and (max-width: $pc-screen-sm - 1) {
+    transform: scale(0.6);
+    right: -20px;
+    top: calc( 100vh - 160px );
+  }
+
+  /* icon arrow [start] */
+  &__icon-arrow{
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    background-image: url('../images/icon-arrow.svg');
+    @extend .bg-contain;
+    transition: all 0.1s ease-out;
+
+    &__L{
+      top: 50px;
+      left: 30px;
+    }
+
+    &__R{
+      bottom: 50px;
+      right: 30px;
+      transform: rotate(180deg);
+    }
+
+  }  /* icon arrow [end] */
+
+  &:hover{
+
+    .hero-block-switch__icon-arrow__L{
+      top: 60px;
+      left: 20px;
+    }
+
+    .hero-block-switch__icon-arrow__R{
+      bottom: 60px;
+      right: 20px;
+      transform: rotate(180deg);
+    }
+
+  }
+
+  /* open type [start] */
+  &--open{
+    top: 0px;
+
+    @media screen and (max-width: $pc-screen-sm - 1) {
+      top: -20px;
+    }
+
+    .hero-block-switch__icon-arrow__L{
+      top: 50px !important;
+      left: 40px !important;
+      transition-delay: 0.5s;
+      transform: rotate(135deg) !important;
+    }
+
+    .hero-block-switch__icon-arrow__R{
+      bottom: 50px !important;
+      right: 40px !important;
+      transition-delay: 0.5s;
+      transform: rotate(-45deg) !important;
+    }
+
+  }  /* open type [end] */
+
+}  /* hero block switch [end] */
+
+
+/* hero block control bar [start] */
+.hero-block-control{
+  position: fixed;
+  display: flex;
+  z-index: $z-index-med;
+  top: calc( 100vh - #{ $space-width*2 } );
+  right: $space-width;
+
+  @media screen and (max-width: $tablet-screen) {
+    top: calc( 100vh - #{ $space-width*2 - $space-width/2 } );
+  }
+
+  @media screen and (max-width: $pc-screen-sm - 1) {
+    right: calc( 100vw - #{$space-width*1.2} - 15px );
+    top: calc( 100vh - #{ $space-width*2 - 115px } );
+    transform: scale(0.8);
+  }
+
+  &__button{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    flex: 50px;
+    cursor: pointer;
+    @extend .bg-contain;
+    background-size: 50px;
+
+    &__list{
+      transition: background-color 0.1s ease-in-out, mask-position 0.1s ease-in-out;
+      background-size: 100px 50px;
+      mask-position: 0px 0px;
+      mask-image: url(../images/button-list.svg);
+
+      &:hover{
+        mask-position: -50px 0px;
+      }
+
+    }
+
+    &__next{
+      transition: background-color 0.1s ease-in-out, mask-position 0.1s ease-in-out;
+      mask-position: 0px -50px;
+      mask-image: url(../images/button-next.svg);
+
+      &:hover{
+        mask-position: 0px 0px;
+      }
+
+    }
+
+    &__prev{
+      transition: background-color 0.1s ease-in-out, mask-position 0.1s ease-in-out;
+      mask-position: 0px 0px;
+      mask-image: url(../images/button-prev.svg);
+
+      &:hover{
+        mask-position: 0px -50px;
+      }
+
+    }
+
+
+  }
+
+}  /* hero block control bar [end] */

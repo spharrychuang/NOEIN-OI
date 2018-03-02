@@ -1,0 +1,276 @@
+.lab-view{
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: $z-index-top;
+  background-color: $color-white;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  @extend .scroll-view;
+
+  .canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .lab-link{
+    color: $color-dark;
+    font-size: $font-s-80;
+    line-height: 90px;
+    @extend .ff-RobotBold;
+
+    &:hover{
+      color: $color-sub;
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: $pc-screen-sm - 1) {
+      font-size: $font-s-48;
+      line-height: 60px;
+    }
+
+  }
+
+  .videoIframe-block{
+    position: relative;
+    padding-bottom: 165%;
+    padding-top: 25px;
+    height: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    // border: 2px solid white;
+    -webkit-border-radius: 16px;
+    box-shadow: 0px 12px 24px rgba(0,0,0,0.15);
+
+    &__iframe{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 6px;
+    }
+
+  }
+
+  .labs-title {
+    position: relative;
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 16px;
+      background-color: $color-sub;
+      top: calc(50% - 4px);
+      left: 0;
+      opacity: 0.8;
+    }
+
+  }
+
+
+  .pop-close-btn{
+    // background-color: $color-main;
+  }
+
+
+  .labs-list{
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 80px;
+
+    &:nth-child(4n + 1){
+      // opacity: 0.1;
+      clear: both;
+    }
+
+    @media screen and (max-width: 1199px) {
+      padding-left: 20px;
+      padding-right: 20px;
+
+      &:nth-child(4n + 1){
+        clear: none;
+      }
+
+      &:nth-child(3n + 1){
+        clear: both;
+      }
+
+    }
+
+    @media screen and (max-width: $pc-screen-md - 1) {
+
+      &:nth-child(4n + 1){
+        clear: none;
+      }
+
+      &:nth-child(3n + 1){
+        clear: none;
+      }
+
+      &:nth-child(2n + 1){
+        clear: both;
+      }
+
+    }
+
+    @media screen and (max-width: $pc-screen-sm) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @media screen and (max-width: $pc-screen-sm - 1) {
+      padding-left: 0px;
+      padding-right: 0px;
+
+      &:nth-child(4n + 1){
+        clear: none;
+      }
+
+      &:nth-child(3n + 1){
+        clear: none;
+      }
+
+      &:nth-child(2n + 1){
+        clear: none;
+      }
+
+    }
+
+  }
+
+
+  /* intro [start] */
+  &__intro{
+    width: 80%;
+    max-width: 1600px;
+    min-width: 280px;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 200px;
+    padding-bottom: 150px;
+
+    @media screen and (max-width: $pc-screen-sm - 1) {
+      padding-top: 150px;
+      padding-bottom: 100px;
+    }
+
+    hr{
+      border: none;
+      height: 100px;
+      margin: 0;
+      padding: 0;
+
+      @media screen and (max-width: $pc-screen-sm - 1) {
+        height: 50px;
+      }
+
+    }
+
+    .intro-txt{
+      font-size: $font-s-120;
+      line-height: 140px;
+      color: $color-white;
+      @extend .ff-RobotLight;
+
+      @media screen and (max-width: $pc-screen-sm - 1) {
+        font-size: 60px;
+        line-height: 70px;
+      }
+
+      img{
+        display: block;
+        max-width: 500px;
+        margin: 20px 0px;
+      }
+
+      .full-photo{
+        max-width: none;
+      }
+
+      a{
+        color: $color-main;
+
+        &:hover{
+          color: $color-main;
+          text-decoration: underline;
+        }
+
+        @media screen and (max-width: $pc-screen-sm - 1) {
+          // font-size: $font-s-20;
+          // line-height: 24px;
+        }
+
+      }
+
+      b{
+        @extend .ff-RobotBold;
+      }
+
+    }
+
+  }
+  /* intro [end] */
+
+
+}
+
+.lab-videos{
+  position: relative;
+  overflow: hidden;
+  display: block;
+  padding: 50px 0px 0px 0px;
+
+  iframe{
+    width: 100% !important;
+  }
+
+  &__info{
+    position: relative;
+    padding-bottom: 20px;
+    height: 140px;
+
+    @media screen and (max-width: $pc-screen-sm - 1) {
+      height: auto;
+    }
+
+    &__title{
+      color: $color-dark;
+      font-size: $font-s-36;
+      margin-bottom: 10px;
+    }
+
+    &__sub-title{
+      color: $color-dark;
+      font-size: $font-s-24;
+      line-height: $font-s-24;
+      margin-bottom: 10px;
+      @extend .ff-RobotBold;
+    }
+
+    &__link{
+      display: inline-block;
+      position: relative;
+      color: $color-dark;
+      padding: 10px 0px;
+      font-size: $font-s-20;
+      cursor: pointer;
+      @extend .ff-RobotBold;
+
+      &:hover{
+        color: $color-sub;
+        text-decoration: underline;
+      }
+
+    }
+
+  }
+
+}

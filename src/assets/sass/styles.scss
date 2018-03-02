@@ -1,0 +1,51 @@
+@import './helpers/helpers';
+
+@import './vendor/bootstrap';
+
+@import './base/reset';
+@import './base/color';
+@import './base/fonts';
+
+@import './commons/layout';
+@import './commons/header';
+@import './commons/footer';
+
+@import './view/home';
+@import './view/projectList';
+@import './view/about';
+@import './view/lab';
+
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: $color-dark;
+  font-family: 'RobotRegular', PingFangTC-Regular, PingFangSC-Regular, Helvetica Neue, Helvetica, Microsoft JhengHei,' 微軟正黑體';
+  @extend .animation-m;
+}
+
+b{
+  font-weight: bolder;
+  font-family: 'RobotRegular' !important;
+}
+
+.awwwards-hm-ribbons{
+  width: 80px;
+  height: 120px;
+  position: fixed;
+  z-index: $z-index-upper;
+  bottom: -10px;
+  left: 0px;
+  background-image: url('/images/ribbons/awwwards_honorable_black_left@2x.png');
+  @extend .bg-cover;
+
+  a{
+    width: inherit;
+    height: inherit;
+    display: block;
+  }
+
+}

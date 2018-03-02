@@ -1,0 +1,168 @@
+// font face
+@font-face {
+    font-family: 'RobotLight';
+    src:url('../fonts/RobotoCondensed-Light.ttf') format('truetype'),
+    /* Pretty Modern Browsers */
+    // url('../fonts/GOTHAM-XLIGHT.woff') format('woff'),
+    /* Pretty Modern Browsers */
+    // url('../fonts/RobotoCondensed-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'RobotRegular';
+    src:url('../fonts/RobotoCondensed-Regular.ttf') format('truetype'),
+    /* Pretty Modern Browsers */
+    // url('../fonts/GOTHAM-XLIGHT.woff') format('woff'),
+    /* Pretty Modern Browsers */
+    // url('../fonts/RobotoCondensed-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'RobotBold';
+    src:url('../fonts/RobotoCondensed-Bold.ttf') format('truetype'),
+    /* Pretty Modern Browsers */
+    // url('../fonts/GOTHAM-XLIGHT.woff') format('woff'),
+    /* Pretty Modern Browsers */
+    // url('../fonts/RobotoCondensed-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'RobotBlackItalic';
+    src:url('../fonts/Roboto-BlackItalic.ttf') format('truetype'),
+    /* Pretty Modern Browsers */
+    // url('../fonts/GOTHAM-XLIGHT.woff') format('woff'),
+    /* Pretty Modern Browsers */
+    // url('../fonts/RobotoCondensed-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'RobotLightItalic';
+    src:url('../fonts/Roboto-LightItalic.ttf') format('truetype'),
+    /* Pretty Modern Browsers */
+    // url('../fonts/GOTHAM-XLIGHT.woff') format('woff'),
+    /* Pretty Modern Browsers */
+    // url('../fonts/RobotoCondensed-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'VarelaRound';
+    src:url('../fonts/VarelaRound-Regular.ttf') format('truetype'),
+    /* Pretty Modern Browsers */
+    // url('../fonts/AppleTsukuARdGothic-Bold-AlphaNum.woff') format('woff'),
+    /* Pretty Modern Browsers */
+    // url('../fonts/VarelaRound-Regular.ttf') format('truetype');
+}
+
+
+// font family
+.ff-RobotLight{
+  font-family: 'RobotLight' !important;
+}
+
+.ff-RobotRegular {
+    font-family: 'RobotRegular' !important;
+}
+
+.ff-RobotBold {
+    font-family: 'RobotBold' !important;
+}
+
+.ff-RobotBlackItalic {
+    font-family: 'RobotBlackItalic' !important;
+}
+
+.ff-RobotLightItalic {
+    font-family: 'RobotLightItalic' !important;
+}
+
+.ff-VarelaRound {
+    font-family: 'VarelaRound' !important;
+}
+
+
+// font size
+.font-s-11 {
+    letter-spacing: 2px;
+    font-size: $font-s-11;
+    -webkit-transform: scale(0.92);
+    font-weight: 400;
+}
+
+.font-s-12 {
+    letter-spacing: 2px;
+    font-size: $font-s-12;
+    font-weight: 400;
+}
+
+.font-s-14 {
+    letter-spacing: 2px;
+    font-size: $font-s-14;
+    font-weight: 400;
+}
+
+.font-s-16 {
+    letter-spacing: 2px;
+    font-size: $font-s-16;
+    font-weight: 600;
+}
+
+.font-s-18 {
+    letter-spacing: 2px;
+    font-size: $font-s-18;
+    font-weight: 600;
+}
+
+.font-s-20 {
+    letter-spacing: 2px;
+    font-size: $font-s-20;
+    font-weight: 500;
+}
+
+.font-s-24 {
+    letter-spacing: 2px;
+    font-size: $font-s-24;
+    font-weight: 500;
+}
+
+.font-s-28 {
+    letter-spacing: 2px;
+    font-size: $font-s-28;
+    font-weight: 500;
+}
+
+.font-s-32 {
+    letter-spacing: 2px;
+    font-size: $font-s-32;
+    font-weight: 500;
+}
+
+.font-s-36 {
+    letter-spacing: 2px;
+    font-size: $font-s-36;
+    font-weight: 500;
+    @extend .ff-RobotBold;
+}
+
+.font-s-48 {
+    letter-spacing: 2px;
+    font-size: $font-s-48;
+    font-weight: 500;
+}
+
+.font-s-60 {
+    letter-spacing: 2px;
+    font-size: $font-s-60;
+    font-weight: bolder;
+}
+
+.font-s-80 {
+    letter-spacing: 2px;
+    font-size: $font-s-80;
+    font-weight: bolder;
+}
+
+.font-s-120 {
+    letter-spacing: 2px;
+    font-size: $font-s-120;
+    font-weight: bolder;
+}

@@ -1,0 +1,367 @@
+// Container
+.container-full{
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+// Button
+.pop-close-btn{
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: fixed;
+  z-index: $z-index-top;
+  right: 0px;
+  top: 0px;
+  background-color: $color-dark;
+  cursor: pointer;
+
+  @media screen and (max-width: $pc-screen-sm - 1) {
+    transform: scale(0.6);
+    right: -20px;
+    top: -20px;
+  }
+
+  /* icon arrow [start] */
+  &__icon-arrow{
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    background-image: url('../images/icon-arrow.svg');
+    // background-color: $color-dark;
+    @extend .bg-contain;
+    transition: all 0.1s ease-out;
+
+    &__L{
+      top: 50px;
+      left: 40px;
+      transform: rotate(135deg);
+    }
+
+    &__R{
+      bottom: 50px;
+      right: 40px;
+      transform: rotate(-45deg);
+    }
+
+  }  /* icon arrow [end] */
+
+}
+
+
+// Photo Background
+.bg-contain{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.bg-cover{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+// View
+.scroll-view{
+  overflow-y:auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tmp-block{
+  width: 100%;
+  position: relative;
+
+  &__subtitle{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    padding: 50px 200px;
+    color: $color-dark;
+    font-size: $font-s-32;
+    text-align: left;
+
+    @media screen and (max-width: $pc-screen-lg - 1) {
+      padding: 50px 80px;
+    }
+
+    @media screen and (max-width: $pc-screen-md) {
+      padding: 30px 30px;
+    }
+
+    @media screen and (max-width: $pc-screen-sm - 1) {
+      font-size: $font-s-24;
+      padding: 20px 20px;
+    }
+
+  }
+
+  /* hero photo [start] */
+  &__heroPhoto{
+    width: 100%;
+    // height: calc(100vh - #{$space-width});
+    height: 100vh;
+    overflow: hidden;
+    @extend .bg-cover;
+
+    &--bgFixed{
+      // background-attachment: fixed;
+    }
+
+  }  /* hero photo [end] */
+
+  /* med photo [start] */
+  &__medPhoto{
+    width: 100%;
+    // max-width: 1600px;
+    height: auto;
+    margin:0 auto;
+    display: block;
+    padding: 0px 200px;
+    position: relative;
+
+    @media screen and (max-width: $pc-screen-lg - 1) {
+      padding: 0px 80px;
+    }
+
+    @media screen and (max-width: $pc-screen-md) {
+      padding: 10px 0px 20px 0px !important;
+    }
+
+  }  /* med photo [end] */
+
+  /* image photo [start] */
+  &__fullPhoto{
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    margin:0 auto;
+    display: block;
+    position: relative;
+  }  /* image photo [end] */
+
+  /* next block [start] */
+  &__next-block{
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $color-dark-40a;
+
+  }  /* next block [end] */
+
+
+  /* info block [start] */
+  &__info-block{
+    width: calc(100% - #{$space-width});
+    max-width: 860px;
+    margin: 0 auto;
+    padding: $space-width 0px;
+    position: relative;
+
+    @media screen and (max-width: $pc-screen-sm) {
+      padding: 30px 0px;
+    }
+
+    @media screen and (max-width: $pc-screen-sm - 1) {
+      width: calc(100% - 60px);
+    }
+
+    &__content{
+      margin-bottom: #{$space-width/2};
+
+      @media screen and (max-width: $pc-screen-sm - 1) {
+        margin-bottom: 30px;
+      }
+
+    }
+
+    .nav-link{
+      color: $color-white;
+      font-size: $font-s-16;
+      display: inline-block;
+      height: 50px;
+      line-height: 50px;
+      padding: 0px 40px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      border-radius: 2px;
+      overflow: hidden;
+      letter-spacing: 1px;
+
+      @media screen and (max-width: $pc-screen-sm - 1) {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      &__website{
+        color: $color-dark;
+        background-color: $color-grey-light;
+      }
+
+      &__appStore{
+        color: $color-white;
+        background-color: $color-dark-80a;
+      }
+
+      &__googlePlay{
+        color: $color-white;
+        background-color: $color-dark-80a;
+      }
+
+      &--none{
+        display: none;
+      }
+
+      &--coming{
+        pointer-events : none;
+      }
+
+      img{
+        position: relative;
+        top: -2px;
+        display: inline-block;
+        vertical-align: middle;
+        height: 24px;
+        margin-right: 5px;
+      }
+
+      &:hover{
+        opacity: 0.8;
+        text-decoration: none !important;
+      }
+
+    }
+
+    .subtitle{
+      color: $color-dark-40a;
+      margin-bottom: 20px;
+      @extend .ff-RobotLight;
+
+      &:after{
+        content: 'I';
+        display: inline-block;
+        margin-left: 15px;
+        color: $color-main;
+        @extend .ff-RobotBlackItalic;
+      }
+
+      @media screen and (max-width: $pc-screen-sm - 1) {
+        font-size: $font-s-24;
+      }
+
+    }
+
+    .typo-photo{
+      height: 80px;
+      width: auto;
+
+      @media screen and (max-width: $pc-screen-sm - 1) {
+        width: 100%;
+        height: auto;
+      }
+
+    }
+
+    .info-txt{
+      line-height: $font-s-36;
+
+      @media screen and (max-width: $pc-screen-sm - 1) {
+        font-size: $font-s-16;
+        line-height: $font-s-24;
+      }
+
+    }
+
+    /* color block [start] */
+    .color-block{
+      width: 100%;
+      position: relative;
+      float: left;
+      box-shadow: 0px 12px 24px rgba(0,0,0,0.1);
+      background-color: #ccc;
+
+      @media screen and (max-width: $pc-screen-sm - 1) {
+        margin-bottom: 15px;
+      }
+
+      &__txt{
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        width: 100%;
+        text-transform: uppercase;
+
+        b{
+          display: block;
+          margin-bottom: 3px;
+          @extend .ff-RobotBold;
+        }
+
+        @media screen and (max-width: $pc-screen-sm - 1) {
+          bottom: 10px;
+          left: 10px;
+          font-size: $font-s-11;
+        }
+
+      }
+
+      &:before{
+        content: '';
+        display: block;
+        margin-top: 100%;
+      }
+
+    }  /* color block [end] */
+
+  } /* info block [end] */
+
+
+  /* list block [start] */
+  &__listBlock{
+    width: 100%;
+    // max-width: 1600px;
+    position: relative;
+    margin: 0 auto;
+    padding: 100px #{$space-width/2} 70px #{$space-width/2};
+    background-color: $color-grey-light;
+
+    @media screen and (max-width: $pc-screen-sm) {
+      padding: 30px 0px 0px 0px;
+    }
+
+    &__row{
+      overflow: hidden;
+
+      .list-photo{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        border-radius: 4px;
+        margin-bottom: 30px;
+        box-shadow: 0px 6px 20px rgba(0,0,0,0.2);
+      }
+
+    }
+
+  }  /* list block [end] */
+
+}
+
+
+// Animation
+.animation-s{
+  transition: all 0.1s ease-in-out;
+}
+.animation-m{
+  transition: all 0.3s ease-in-out;
+}
+.animation-l{
+  transition: all 0.5s ease-in-out;
+}

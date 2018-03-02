@@ -1,0 +1,217 @@
+.about-view{
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: $z-index-top;
+  background-color: $color-dark;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  @extend .scroll-view;
+
+  .canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .line-title{
+    position: relative;
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 16px;
+      background-color: $color-main;
+      top: calc(50% - 4px);
+      left: 0;
+      opacity: 0.8;
+    }
+    
+  }
+
+  /* gif photos [start] */
+  &__gif-photos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: $z-index-low;
+    justify-content:center;
+    align-items:center;
+
+    &__photos{
+      width: calc(100vw - 300px);
+      min-width: 600px;
+      max-width: 1000px;
+      height: calc(100vh - 300px);
+      min-height: 400px;
+      position: relative;
+      overflow: hidden;
+      background-color: $color-dark;
+
+      .fit-photos{
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        object-fit: cover;
+      }
+
+    }
+
+  }  /* gif photos [end] */
+
+
+  /* intro [start] */
+  &__intro{
+    width: 80%;
+    max-width: 1600px;
+    min-width: 280px;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 250px;
+    padding-bottom: 200px;
+
+    @media screen and (max-width: $pc-screen-sm - 1) {
+      padding-top: 150px;
+      padding-bottom: 100px;
+    }
+
+    hr{
+      border: none;
+      height: 100px;
+      margin: 0;
+      padding: 0;
+
+      @media screen and (max-width: $pc-screen-sm - 1) {
+        height: 50px;
+      }
+
+    }
+
+    .intro-txt{
+      font-size: $font-s-120;
+      line-height: 140px;
+      color: $color-white;
+      @extend .ff-RobotLight;
+
+      @media screen and (max-width: $pc-screen-sm - 1) {
+        font-size: 60px;
+        line-height: 70px;
+      }
+
+      img{
+        display: block;
+        max-width: 500px;
+        margin: 20px 0px;
+      }
+
+      .full-photo{
+        max-width: none;
+      }
+
+      &__link{
+        color: $color-main;
+
+        &:hover{
+          color: $color-main;
+          text-decoration: underline;
+        }
+
+        &--sub-color{
+
+          color: $color-sub !important;
+
+          &:hover{
+            color: $color-sub !important;
+            text-decoration: underline;
+          }
+
+        }
+
+      }
+
+      &__link-icon{
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        margin-right: 40px;
+        margin-bottom: 40px;
+        position: relative;
+        @extend .animation-s;
+
+        img{
+          width: inherit;
+        }
+
+        &:hover{
+          transform: scale(1.1);
+          opacity: 0.8;
+        }
+
+      }
+
+      b{
+        @extend .ff-RobotBold;
+      }
+
+    }
+
+  }
+  /* intro [end] */
+
+
+}
+
+
+/* hero block switch [start] */
+.about-view-close{
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: fixed;
+  z-index: $z-index-top;
+  right: 0px;
+  top: 0px;
+  background-color: $color-dark;
+  cursor: pointer;
+
+  @media screen and (max-width: $pc-screen-sm - 1) {
+    transform: scale(0.6);
+    right: -20px;
+    top: -20px;
+  }
+
+  /* icon arrow [start] */
+  &__icon-arrow{
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    background-image: url('../images/icon-arrow.svg');
+    // background-color: $color-dark;
+    @extend .bg-contain;
+    transition: all 0.1s ease-out;
+
+    &__L{
+      top: 50px;
+      left: 40px;
+      transform: rotate(135deg);
+    }
+
+    &__R{
+      bottom: 50px;
+      right: 40px;
+      transform: rotate(-45deg);
+    }
+
+  }  /* icon arrow [end] */
+
+
+}  /* hero block switch [end] */

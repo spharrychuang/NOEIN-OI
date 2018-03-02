@@ -1,0 +1,72 @@
+// Screen
+$pc-screen-lg: 1367px;
+$tablet-screen: 1100px;
+$pc-screen-md: 992px;
+$pc-screen-sm: 768px;
+$pc-screen-xs: 320px;
+
+// View
+$space-width: 100px;
+
+// Colors
+$color-alpha: rgba(0,0,0,0);
+
+$color-white: #fff;
+$color-white-90a: rgba(255,255,255,.9);
+$color-white-80a: rgba(255,255,255,.8);
+$color-white-60a: rgba(255,255,255,.6);
+$color-white-40a: rgba(255,255,255,.4);
+$color-white-20a: rgba(255,255,255,.2);
+$color-white-10a: rgba(255,255,255,.1);
+$color-white-5a: rgba(255,255,255,.05);
+
+$color-dark: #0E0D16;
+$color-dark-90a: rgba(15,13,22,.9);
+$color-dark-80a: rgba(15,13,22,.8);
+$color-dark-60a: rgba(15,13,22,.6);
+$color-dark-40a: rgba(15,13,22,.4);
+$color-dark-20a: rgba(15,13,22,.2);
+$color-dark-10a: rgba(15,13,22,.1);
+$color-dark-5a: rgba(15,13,22,.05);
+
+$color-grey: #CFCFD0;
+$color-grey-light: #F3F3F3;
+$color-grey-dark: #9F9EA2;
+
+$color-main: #F5E51B;
+$color-main-light: #FFF353;
+$color-main-darken: #BBAE0A;
+
+$color-sub: #29F1C5;
+$color-sub-light: #6CFEDD;
+$color-sub-darken: #21CCA6;
+
+$color-red: #FF435A;
+$color-blue: #449AFF;
+$color-purple: #8778D5;
+$color-green: #C2E700;
+
+
+// Z-Index
+$z-index-low: 0;
+$z-index-upper: 1;
+$z-index-med: 333;
+$z-index-high: 666;
+$z-index-top: 999;
+
+
+// FontSize
+$font-s-11: 11px;
+$font-s-12: 12px;
+$font-s-14: 14px;
+$font-s-16: 16px;
+$font-s-18: 18px;
+$font-s-20: 20px;
+$font-s-24: 24px;
+$font-s-28: 28px;
+$font-s-32: 32px;
+$font-s-36: 36px;
+$font-s-48: 48px;
+$font-s-60: 60px;
+$font-s-80: 80px;
+$font-s-120: 120px;

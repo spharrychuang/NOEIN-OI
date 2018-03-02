@@ -1,0 +1,202 @@
+.projects-list-view{
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: $z-index-top;
+  background-color: $color-dark;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  @extend .scroll-view;
+
+  .canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  &__block{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    z-index: $z-index-med;
+    top: 0;
+    right: 0;
+  }
+
+  &__bg-block{
+    position: fixed;
+    z-index: $z-index-low;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+
+    &__d{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      opacity: 0;
+      transform: scale(1, 1);
+      transition-property: transform;
+      transition-duration: 30s;
+      transition-timing-function: linear;
+      // transition: opacity 0.3s ease-out, transform 2 linear;
+      @extend .bg-cover;
+
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-dark-40a;
+      }
+
+    }
+
+  }
+
+  /* canvas [start] */
+  &__canvas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    // background-color: $color-white-40a;
+
+  }  /* canvas [end] */
+
+
+}
+
+
+/* projects list block [start] */
+.projects-list-block{
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  margin: 100px auto;
+  display: block;
+
+  @media screen and (max-width: $pc-screen-sm - 1) {
+    margin: 60px auto;
+  }
+
+  /* projects list [start] */
+  &__list{
+    display: block;
+    position: relative;
+    padding: 50px 50px;
+    cursor: pointer;
+
+    @media screen and (max-width: $pc-screen-sm - 1) {
+      padding: 30px 30px;
+    }
+
+    .projects-company{
+      position: relative;
+      z-index: $z-index-med;
+      display: block;
+      font-size: $font-s-20;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      @extend .ff-RobotLight;
+
+      @media screen and (max-width: $pc-screen-sm - 1) {
+        font-size: $font-s-16;
+        line-height: $font-s-20;
+      }
+
+    }
+
+    .projects-title{
+      position: relative;
+      z-index: $z-index-med;
+      font-size: $font-s-36;
+      letter-spacing: 2px;
+      @extend .ff-RobotLight;
+
+      @media screen and (max-width: $pc-screen-sm - 1) {
+        font-size: $font-s-24;
+        line-height: $font-s-28;
+      }
+
+    }
+
+    .colorD{
+      position: absolute;
+      z-index: $z-index-low;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      @extend .animation-s;
+    }
+
+    &:hover{
+
+      .colorD{
+        opacity: 1;
+      }
+
+    }
+
+  }  /* projects list [end] */
+
+
+}  /* projects list block [end] */
+
+
+/* hero block switch [start] */
+.projects-list-view-close{
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: fixed;
+  z-index: $z-index-top;
+  right: 0px;
+  top: 0px;
+  background-color: $color-dark;
+  cursor: pointer;
+
+  @media screen and (max-width: $pc-screen-sm - 1) {
+    transform: scale(0.6);
+    right: -20px;
+    top: -20px;
+  }
+
+  /* icon arrow [start] */
+  &__icon-arrow{
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    background-image: url('../images/icon-arrow.svg');
+    @extend .bg-contain;
+    transition: all 0.1s ease-out;
+
+    &__L{
+      top: 50px;
+      left: 40px;
+      transform: rotate(135deg);
+    }
+
+    &__R{
+      bottom: 50px;
+      right: 40px;
+      transform: rotate(-45deg);
+    }
+
+  }  /* icon arrow [end] */
+
+
+}  /* hero block switch [end] */
