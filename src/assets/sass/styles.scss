@@ -22,7 +22,7 @@ html, body {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  background-color: $color-dark;
+  background-color: $color-white;
   font-family: 'RobotRegular', PingFangTC-Regular, PingFangSC-Regular, Helvetica Neue, Helvetica, Microsoft JhengHei,' 微軟正黑體';
   @extend .animation-m;
 }
@@ -39,7 +39,7 @@ b{
   z-index: $z-index-upper;
   bottom: -10px;
   left: 0px;
-  background-image: url('/images/ribbons/awwwards_honorable_black_left@2x.png');
+  background-image: url('/images/ribbons/awwwards_honorable_white_left@2x.png');
   @extend .bg-cover;
 
   a{

@@ -14,7 +14,7 @@
   &__logo{
     width: 170px;
     height: 30px;
-    background-image: url('../images/logo-white.svg');
+    background-image: url('../images/logo.svg');
     @extend .bg-contain;
 
     @media screen and (max-width: $pc-screen-sm - 1) {
@@ -36,7 +36,7 @@
     /* nav link [start] */
     &__link{
       letter-spacing: 2px;
-      color: $color-white;
+      color: $color-dark;
       position: relative;
       text-decoration: none !important;
       cursor: pointer;
@@ -67,7 +67,7 @@
       }
 
       &:hover{
-        color: $color-white !important;
+        color: $color-dark !important;
 
         &:before{
           opacity: 0.7;
